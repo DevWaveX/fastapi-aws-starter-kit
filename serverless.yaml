@@ -1,0 +1,30 @@
+org: cox65
+app: fastapi-aws-starter-kit
+service: fastapi-aws-starter-kit
+package:
+  individually: true
+provider:
+  name: aws
+  runtime: python3.9
+  region: eu-west-1
+  httpApi:
+    cors: true
+  timeout: 10
+  memorySize: 128
+plugins:
+  - serverless-python-requirements
+  - serverless-offline
+functions:
+  app:
+    package:
+      patterns:
+        - "fastapi_aws_starter_kit/**"
+    handler: fastapi_aws_starter_kit.handler.handler
+    events:
+      - http:
+          method: any
+          path: /{proxy+}
+          cors: true
+custom:
+  pythonRequirements:
+    dockerizePip: true
