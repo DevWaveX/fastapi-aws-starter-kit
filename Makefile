@@ -6,12 +6,12 @@ install-python-requirements:
 	poetry install
 
 black:
-	black fastapi_aws_starter_kit
+	poetry run black fastapi_aws_starter_kit
 
 flake8:
-	flake8 fastapi_aws_starter_kit
+	poetry run flake8 fastapi_aws_starter_kit
 
-serverless-deploy:
+deploy:
 	sls deploy
 
 serve:
