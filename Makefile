@@ -12,7 +12,7 @@ flake8:
 	poetry run flake8 fastapi_aws_starter_kit
 
 deploy:
-	sls deploy
+	npx sls deploy
 
 serve:
-	sls offline
+	npx sls offline
