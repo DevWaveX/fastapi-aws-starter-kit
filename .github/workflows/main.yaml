@@ -34,7 +34,7 @@ jobs:
       run: make flake8
 
     - name: Serverless AWS authentication
-      run: sls config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      run: npx sls config credentials --provider aws --key ${{ secrets.AWS_ACCESS_KEY }} --secret ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     - name: Deploy with Serverless
       run: make deploy
