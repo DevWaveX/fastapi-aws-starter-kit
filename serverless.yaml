@@ -1,12 +1,14 @@
-org: cox65
+org: devopsci # Comment/Remove this line if you dont have https://app.serverless.com/ account or if you are using it please change to your org name
 app: fastapi-aws-starter-kit
 service: fastapi-aws-starter-kit
+# https://www.serverless.com/framework/docs/environment-variables
+useDotenv: true
 package:
   individually: true
 provider:
   name: aws
   runtime: python3.9
-  region: eu-west-1
+  region: ${file(./serverless-config.${opt:stage, 'dev'}.json):STAGE, "us-west-2"}
   httpApi:
     cors: true
   timeout: 10

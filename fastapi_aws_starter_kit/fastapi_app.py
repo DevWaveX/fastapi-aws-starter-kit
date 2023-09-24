@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 from fastapi_aws_starter_kit.routers.health_check_api import router as hc_router
@@ -18,6 +19,7 @@ app.add_middleware(
 
 @app.get(path="/health", description="Health check")
 def health_check():
+    print(os.getenv("FOO"))
     return {"status": "OK"}
 
 
