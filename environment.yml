@@ -1,0 +1,17 @@
+# https://stackoverflow.com/questions/70851048/does-it-make-sense-to-use-conda-poetry
+# https://saturncloud.io/blog/does-it-make-sense-to-use-conda-poetry-a-deep-dive-for-data-scientists
+name: serverless_env
+channels:
+  - defaults
+  - pytorch
+  - conda-forge
+  # We want to have a reproducible setup, so we don't want default channels,
+  # which may be different for different users. All required channels should
+  # be listed explicitly here.
+  - nodefaults
+dependencies:
+  - python=3.9  # or don't specify the version and use the latest stable Python
+  - mamba
+  - pip  # pip must be mentioned explicitly, or conda-lock will fail
+  - poetry=1.3  # or 1.1.*, or no version at all -- as you want
+
