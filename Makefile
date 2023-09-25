@@ -16,3 +16,6 @@ deploy:
 
 serve:
 	npx sls offline
+
+remove:
+	npx sls remove
