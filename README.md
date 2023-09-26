@@ -27,12 +27,17 @@ npx serverless login
 ```
 
 Then you will be able to login using your browsers.
+
 ![](https://i.imgur.com/KDpIpco.png)
 
-If you havent created a project before, please go to your Serverless dashboard and create a new project, it must have same name as your app name (on the serverless.yaml file):
+If you havent created an app before, please go to your Serverless dashboard and create a new project, it must have same name as your app name (on the `serverless.yaml` file):
+
 ![](https://i.imgur.com/cuulyzZ.png)
 
 In this example:
+
+![](https://i.imgur.com/zMLe2mm.png)
+
 ![](https://i.imgur.com/BD6lkVA.png)
 
 - If you do not have Serverless account: go to the Deployment step
