@@ -2,7 +2,6 @@ install-serverless:
 	npm install
 
 install-python-requirements:
-	pip install poetry
 	poetry install
 
 black:
