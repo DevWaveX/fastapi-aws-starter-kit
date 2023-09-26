@@ -11,7 +11,7 @@ This starter kit shows how to deploy a serverless REST API on AWS using:
 * FastAPI
 * Serverless framework
 
-### Installation
+### A. Installation
 All the following installation steps for the first time only
 
 #### 1. Install Make
@@ -83,7 +83,7 @@ make install-python-requirements
 
 Now its time to go to the next steps!
 
-### Local development
+### B. Local development
 1. If you havent activated your `conda` environment, let's activate it:
 ```bash
 conda activate serverless_env
@@ -111,7 +111,7 @@ It should return:
 ![](https://i.imgur.com/fH0Y2dx.png)
 
 
-### Deployment
+### C. Deployment
 #### 1. Deploy locally
 ##### a. Pre-deployment
 - If you have a Serverless account
@@ -154,8 +154,12 @@ curl your-serverless-endpoint
 Here `your-serverless-endpoint` is the endpoint that you can get from the **Deployment** step above.
 ![](https://i.imgur.com/R366e1s.png)
 
-### Remove app:
+### D. Remove app:
 If you want to remove your app, run the following command:
+```
+npx sls remove
+```
+Or if you have `make`:
 ```bash
 make remove
 ```
