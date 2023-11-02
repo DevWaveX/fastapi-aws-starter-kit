@@ -5,12 +5,15 @@ tags:
   - AWS
 canonicalUrl: >-
   https://medium.com/aws-tip/serverless-rest-api-on-aws-with-fastapi-bd9de11f925a
-coverImage: >-
-  https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/cover.png
+coverImage: https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/cover.png
 publications:
-  - platform: devTo
+  - id: 1655323
+    url: https://dev.to/coxhawk/serverless-rest-api-on-aws-with-fastapi-i72
+    platform: devTo
     published: true
-  - platform: hashnode
+  - id: 654421ca544bd9c69327cdd5
+    url: TBD
+    platform: hashnode
     publicationId: 62019a434efba97010a97bb9
 ---
 
@@ -110,7 +113,7 @@ And that’s it ! 🚀
 ## FastAPI AWS Starter Kit
 
 Here the the repository related to this article:
-[**GitHub - Cox65/fastapi-aws-starter-kit: Starter kit to deploy FastAPI as an AWS serverless…**](https://github.com/Cox65/fastapi-aws-starter-kit)
+[**GitHub - DevWaveX/fastapi-aws-starter-kit: Starter kit to deploy FastAPI as an AWS serverless…**](https://github.com/DevWaveX/fastapi-aws-starter-kit)
 
 I hope you enjoyed reading this article and that it will help you in your next projects ! 🤘
 

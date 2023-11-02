@@ -1,39 +1,34 @@
 name: Deploy FastAPI AWS Starter Kit
 
-on:
-  push:
-    branches: 
-        - main
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v4
-      with:
-        python-version: 3.9
-    
-    - name: Install NodeJS
-      uses: actions/setup-node@v3
-      with:
-        node-version: '19.x'
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
 
-    - name: Installing Serverless
-      run: make install-serverless
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: "19.x"
 
-    - name: Installing Python requirements
-      run: make install-python-requirements
+      - name: Installing Serverless
+        run: make install-serverless
 
-    - name: Black code analysis
-      run: make black
+      - name: Installing Python requirements
+        run: make install-python-requirements
 
-    - name: Flake8 code analysis
-      run: make flake8
+      - name: Black code analysis
+        run: make black
 
-    - name: Deploy with Serverless
-      run: make deploy
-      env:
-        SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
+      - name: Flake8 code analysis
+        run: make flake8
+
+      - name: Deploy with Serverless
+        run: make deploy
+        env:
+          SERVERLESS_ACCESS_KEY: ${{ secrets.SERVERLESS_ACCESS_KEY }}
