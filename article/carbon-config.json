@@ -1,8 +1,0 @@
-{
-  "default": {
-    "backgroundColor": "rgba(0, 0, 0, 0)",
-    "theme": "night-owl",
-    "windowTheme": "none",
-    "fontFamily": "Hack"
-  }
-}

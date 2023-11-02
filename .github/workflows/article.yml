@@ -19,18 +19,15 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
-      - name: Carbon markdown
-        id: carbon-markdown
-        uses: Cox65/carbon-markdown-action@main
-        with:
-          carbonConfigFile: article/carbon-config.json
-          defaultCarbonPreset: default
+      - name: Markdown Code inject
+        id: markdown-code-inject
+        uses: Cox65/markdown-code-inject@main
 
-      - name: Auto-commit carbon images
+      - name: Auto-commit markdown code inject
         id: auto-commit-images
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: 🤖 Commiting carbon-now changes
+          commit_message: 🤖 Commiting code-inject changes
 
       - name: Publishing article
         id: publishing-article
