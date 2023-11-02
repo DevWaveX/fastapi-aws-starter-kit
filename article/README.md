@@ -47,7 +47,7 @@ Then you will have to install the **Serverless** framework via npm. See instruct
 First of all, we will build our FastAPI application. Add **fastapi** dependency in your requirements.txt and install it.
 Then you can create your FastAPI application:
 [{"filename": "../fastapi_aws_starter_kit/fastapi_app.py"}]: 🎨
-<a href="https://github.com/DevWaveX/fastapi-aws-starter-kit/blob/main/fastapi_aws_starter_kit/fastapi_app.py" target="_blank">![🎨../fastapi_aws_starter_kit/fastapi_app.py](https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/carbon/4jQcGLaFf7MJZjBKQJjovN/fastapi_app.py.png)</a>
+<a href="https://github.com/DevWaveX/fastapi-aws-starter-kit/blob/main/fastapi_aws_starter_kit/fastapi_app.py" target="_blank">![🎨../fastapi_aws_starter_kit/fastapi_app.py](https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/carbon/1yiUEze8yyAtthM54vwcex/fastapi_app.py.png)</a>
 
 ## Deploy FastAPI on AWS
 
@@ -59,13 +59,13 @@ In order to build the handler for our Lambda which will be called by our API Gat
 
 Add **mangum** to your dependencies and build the handler as follow:
 [{"filename": "../fastapi_aws_starter_kit/handler.py"}]: 🎨
-<a href="https://github.com/DevWaveX/fastapi-aws-starter-kit/blob/main/fastapi_aws_starter_kit/handler.py" target="_blank">![🎨../fastapi_aws_starter_kit/handler.py](https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/carbon/pNCfA6mHYXz8bN2Zsj13vM/handler.py.png)</a>
+<a href="https://github.com/DevWaveX/fastapi-aws-starter-kit/blob/main/fastapi_aws_starter_kit/handler.py" target="_blank">![🎨../fastapi_aws_starter_kit/handler.py](https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/carbon/ucUoEB3qB97bi8REBqAbQw/handler.py.png)</a>
 
 ### Configure serverless.yaml
 
 Serverless configuration is pretty easy, here is what I did as a simple example:
 [{"filename": "../serverless.yaml"}]: 🎨
-<a href="https://github.com/DevWaveX/fastapi-aws-starter-kit/blob/main/serverless.yaml" target="_blank">![🎨../serverless.yaml](https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/carbon/ofuhkRhw1Lu7GPoivREMyE/serverless.yaml.png)</a>
+<a href="https://github.com/DevWaveX/fastapi-aws-starter-kit/blob/main/serverless.yaml" target="_blank">![🎨../serverless.yaml](https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/carbon/7RadGo6mNhhCgnX9tzqaUh/serverless.yaml.png)</a>
 
 As you can see I’m using 2 plugins:
 
@@ -86,7 +86,7 @@ sls deploy
 If you want to run your API in local, you have two options.
 Either you can run an [**uvicorn**](https://www.uvicorn.org/) web server like this:
 [{"filename": "../fastapi_aws_starter_kit/web_server.py"}]: 🎨
-<a href="https://github.com/DevWaveX/fastapi-aws-starter-kit/blob/main/fastapi_aws_starter_kit/web_server.py" target="_blank">![🎨../fastapi_aws_starter_kit/web_server.py](https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/carbon/84Uaxyv8CSQT7Jg2Huf4EC/web_server.py.png)</a>
+<a href="https://github.com/DevWaveX/fastapi-aws-starter-kit/blob/main/fastapi_aws_starter_kit/web_server.py" target="_blank">![🎨../fastapi_aws_starter_kit/web_server.py](https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/carbon/hn9fot2TMz8633g2kHoDUb/web_server.py.png)</a>
 
 Either, and this what I recommend as we are using Serverless, you can use **serverless-offline** plugin I just mentionned before.
 
