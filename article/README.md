@@ -3,9 +3,10 @@ title: ⚡ Serverless REST API on AWS with FastAPI ⚡
 tags:
   - Python
   - AWS
-canonicalUrl: https://medium.com/aws-tip/serverless-rest-api-on-aws-with-fastapi-bd9de11f925a
+canonicalUrl: >-
+  https://medium.com/aws-tip/serverless-rest-api-on-aws-with-fastapi-bd9de11f925a
 coverImage: >-
-  https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/articles/fastapi-serverless-aws/article/cover.png
+  https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/cover.png
 publications:
   - platform: devTo
     published: false
