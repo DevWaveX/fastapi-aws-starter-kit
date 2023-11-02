@@ -5,19 +5,14 @@ tags:
   - AWS
 canonicalUrl: >-
   https://medium.com/aws-tip/serverless-rest-api-on-aws-with-fastapi-bd9de11f925a
-coverImage: https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/cover.png
+coverImage: >-
+  https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/cover.png
 publications:
-  - id: 1655284
-    url: >-
-      https://dev.to/coxhawk/serverless-rest-api-on-aws-with-fastapi-55o7-temp-slug-6045921
-    platform: devTo
-    published: false
-  - id: 6544208987cb01c1e88c3737
-    url: TBD
-    platform: hashnode
+  - platform: devTo
+    published: true
+  - platform: hashnode
     publicationId: 62019a434efba97010a97bb9
 ---
-
 
 # ⚡ Serverless REST API on AWS with FastAPI ⚡
 
