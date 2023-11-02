@@ -17,6 +17,7 @@ publications:
     publicationId: 62019a434efba97010a97bb9
 ---
 
+
 # ⚡ Serverless REST API on AWS with FastAPI ⚡
 
 Hi there! 👊
