@@ -1,0 +1,48 @@
+name: Publish article
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-articles-action:
+    name: Publish article
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Carbon markdown
+        id: carbon-markdown
+        uses: Cox65/carbon-markdown-action@main
+        with:
+          carbonConfigFile: article/carbon-config.json
+          defaultCarbonPreset: default
+
+      - name: Auto-commit carbon images
+        id: auto-commit-images
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 🤖 Commiting carbon-now changes
+
+      - name: Publishing article
+        id: publishing-article
+        uses: Cox65/dev-articles-publisher@main
+        with:
+          searchPatterns: "article/README.md"
+          hashnodeApiKey: ${{ secrets.HASHNODE_API_KEY }}
+          mediumApiKey: ${{ secrets.MEDIUM_API_KEY }}
+          devToApiKey: ${{ secrets.DEVTO_API_KEY }}
+
+      - name: Auto-commit
+        id: auto-commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 🤖 Commiting publications metadata
