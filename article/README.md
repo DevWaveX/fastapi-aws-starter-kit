@@ -10,7 +10,9 @@ canonicalUrl: >-
 coverImage: https://github.com/DevWaveX/fastapi-aws-starter-kit/raw/main/article/cover.png
 publications:
   - platform: devTo
+    id: 1655339
     published: true
+    url: https://dev.to/coxhawk/serverless-rest-api-on-aws-with-fastapi-1e6a
   - id: 6544258d544bd9c69327cdff
     url: TBD
     platform: hashnode
@@ -45,7 +47,8 @@ First of all, we will build our FastAPI application. Add **fastapi** dependency 
 Then you can create your FastAPI application:
 
 <!-- CODE:START file=../fastapi_aws_starter_kit/fastapi_app.py -->
-``` Python
+
+```Python
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
 from fastapi_aws_starter_kit.routers.health_check_api import router as hc_router
@@ -72,6 +75,7 @@ def health_check():
 app.include_router(hc_router)
 
 ```
+
 <!-- CODE:END -->
 
 ## Deploy FastAPI on AWS
@@ -85,13 +89,15 @@ In order to build the handler for our Lambda which will be called by our API Gat
 Add **mangum** to your dependencies and build the handler as follow:
 
 <!-- CODE:START file=../fastapi_aws_starter_kit/handler.py -->
-``` Python
+
+```Python
 from mangum import Mangum
 from fastapi_aws_starter_kit.fastapi_app import app
 
 handler = Mangum(app=app)
 
 ```
+
 <!-- CODE:END -->
 
 ### Configure serverless.yaml
@@ -99,7 +105,8 @@ handler = Mangum(app=app)
 Serverless configuration is pretty easy, here is what I did as a simple example:
 
 <!-- CODE:START file=../serverless.yaml -->
-``` MiniYAML
+
+```MiniYAML
 org: cox65
 app: fastapi-aws-starter-kit
 service: fastapi-aws-starter-kit
@@ -132,6 +139,7 @@ custom:
     dockerizePip: true
 
 ```
+
 <!-- CODE:END -->
 
 As you can see I’m using 2 plugins:
@@ -154,7 +162,8 @@ If you want to run your API in local, you have two options.
 Either you can run an [**uvicorn**](https://www.uvicorn.org/) web server like this:
 
 <!-- CODE:START file=../fastapi_aws_starter_kit/web_server.py -->
-``` Python
+
+```Python
 import os
 import uvicorn
 
@@ -167,6 +176,7 @@ if __name__ == "__main__":
     )
 
 ```
+
 <!-- CODE:END -->
 
 Either, and this what I recommend as we are using Serverless, you can use **serverless-offline** plugin I just mentionned before.
