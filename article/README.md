@@ -110,7 +110,7 @@ package:
   individually: true
 provider:
   name: aws
-  runtime: python3.9
+  runtime: python3.12
   region: eu-west-1
   httpApi:
     cors: true
@@ -184,15 +184,16 @@ Either, and this what I recommend as we are using Serverless, you can use **serv
     Offline [http for lambda] listening on http://localhost:3002
     Function names exposed for local invocation by aws-sdk:
                * app: fastapi-aws-starter-kit-dev-app
-
+    
        ┌───────────────────────────────────────────────────────────────────────┐
        │                                                                       │
-       │   ANY | http://localhost:3000/dev/{proxy*}                            │
+       │   ANY | http://localhost:3000/{proxy*}                                │
        │   POST | http://localhost:3000/2015-03-31/functions/app/invocations   │
        │                                                                       │
        └───────────────────────────────────────────────────────────────────────┘
+    
+    Server ready: http://localhost:3000 🚀
 
-    Server ready: http://localhost:3000
 ```
 
 And that’s it ! 🚀

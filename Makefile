@@ -15,4 +15,4 @@ deploy:
 	npx sls deploy
 
 serve:
-	npx sls offline
+	npx sls offline --noPrependStageInUrl

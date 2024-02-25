@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fastapi-aws-starter-kit"
-version = "0.1.0"
+version = "0.2.0"
 description = "Starter kit for FastAPI deployed in AWS."
 authors = ["Nicolas Laffargue <coxhawk65@gmail.com>"]
 license = "GPL"
@@ -9,12 +9,12 @@ packages = [{include = "fastapi_aws_starter_kit"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-fastapi = "^0.88.0"
+fastapi = "^0.110.0"
 mangum = "^0.17.0"
 
 [tool.poetry.group.dev.dependencies]
-black = "^22.12.0"
-flake8 = "^6.0.0"
+black = "^24.2.0"
+flake8 = "^7.0.0"
 
 [build-system]
 requires = ["poetry-core"]
